@@ -1,0 +1,48 @@
+{
+  "name": "@restash/node",
+  "version": "0.0.1",
+  "description": "Official Restash Node.js SDK",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/restashio/restash-node.git"
+  },
+  "homepage": "https://restash.io",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "pnpm build",
+    "test": "NODE_NO_WARNINGS=1 jest"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Restash",
+  "keywords": [
+    "restash",
+    "sdk",
+    "node"
+  ],
+  "bugs": {
+    "url": "https://github.com/restashio/restash-node/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.1",
+    "jest": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
+    "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
