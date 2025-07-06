@@ -1,5 +1,3 @@
-# @restash/node
-
 The official Restash Node.js SDK.
 
 ## Installation

@@ -42,6 +42,11 @@ export type RetrieveFileResponseSuccess = {
    * The key of the file.
    */
   key: string;
+
+  /**
+   * The metadata of the file.
+   */
+  metadata: Record<string, string> | null;
 };
 
 export type RetrieveFileResponse = {

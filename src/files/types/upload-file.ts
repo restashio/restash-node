@@ -7,6 +7,7 @@ export type UploadFileResponseSuccess = {
   contentType: string;
   key: string;
   url: string;
+  metadata: Record<string, string> | null;
 };
 
 export type UploadFileResponse = {
@@ -27,9 +28,15 @@ export type UploadOptions = {
    * This will determine the folder or directory the file is uploaded to.
    */
   path?: string;
+
+  /**
+   * Optional metadata to attach to the file.
+   * This can be used to store additional information about the file.
+   */
+  metadata?: Record<string, string>;
 };
 
 export type UploadRequest = {
   file: File | Blob;
-  options?: { name?: string; path?: string };
+  options?: { name?: string; path?: string; metadata?: Record<string, string> };
 };

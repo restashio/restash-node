@@ -53,6 +53,10 @@ export class Files {
       formData.append("path", options.path);
     }
 
+    if (options.metadata) {
+      formData.append("metadata", JSON.stringify(options.metadata));
+    }
+
     return await this.restash.post<UploadFileResponseSuccess>(
       "/files/upload",
       formData,
